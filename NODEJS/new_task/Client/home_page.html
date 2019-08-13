@@ -1,0 +1,47 @@
+<html>
+
+<head>
+        <link rel="stylesheet" href="./css/style.css">
+        <style type="text/css">
+                .table,
+                th,
+                td {
+                        border: 1px solid black;
+                        width: 30px;
+                        height: 10px;
+                }
+        </style>
+
+</head>
+
+<body class="blue">
+
+        <form name="f" method="post" action="/addpage">
+
+                <h4 style="text-align: center">WELCOME TO HOME PAGE </h4>
+                <h4 style="text-align: center"><u>PRODUCT TABLE</u></h4>
+                <a class="btn waves-effect waves-light col s8" onclick="location.href  = '/addpage';">Add Product</a>
+
+
+                <a class="btn waves-effect waves-light col s8" onclick=location.href='/login' ;">Logg Out</a>
+
+                <table id="table1">
+                        <tr>
+                                <th>Product_d</th>
+                                <th>Product_Id</th>
+                                <th>ProductName</th>
+                                <th>ProductOwner</th>
+                                <th>ProductOwnerid</th>
+                                <th>ProductUrl</th>
+                                <th>Operations1</th>
+                                <th>Operations2</th>
+
+                        </tr>
+
+
+
+                </table>
+                <script src="./scripts/Products.js"></script>
+</body>
+
+</html>
