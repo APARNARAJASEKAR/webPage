@@ -1,0 +1,1 @@
+exports.myMessage = 'My vision is  working towards in and around the world beyond the limits';

@@ -1,0 +1,4 @@
+if (currentUser.name == " " && currentUser.email == "" && currentUser.pass == "" && currentUser.repass == "") {
+        console.log("Please enter a  value");
+        document.getElementById("sample").innerHTML = "Enter all  values";
+    }

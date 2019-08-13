@@ -1,0 +1,50 @@
+function myFunction() {
+
+
+    var currentUser = {
+        name: document.getElementById("username").value,
+        email: document.getElementById("email").value,
+        pass: document.getElementById("password1").value,
+        repass: document.getElementById("password2").value,
+
+    }
+    document.getElementById("sample").innerHTML = first;
+    if (currentUser.pass !== currentUser.repass) {
+        var first = "your password are incorrect";
+
+        document.getElementById("sample").innerHTML = first;
+    } else {
+        var retrive = JSON.parse(localStorage.getItem('users'));
+
+        /* if (!retrive && !retrive.length > 1) {
+             console.log("if condion callrd.........");
+
+             return;*/
+    };
+
+    for (let i = 0; i < retrive.length; i++) {
+
+
+        if (retrive[i].email == currentUser.email) {
+            console.log("Email already exists");
+
+        } else {
+
+            var allUsers = [];
+            if (retrive == 0) {
+                if (JSON.parse(localStorage.getItem('users'))) {
+                    allUsers = JSON.parse(localStorage.getItem('users'));
+                    allUsers.push(currentUser);
+                } else {
+                    allUsers.push(currentUser);
+
+                }
+                localStorage.setItem('users', JSON.stringify(allUsers));
+                location.replace("home_page.html");
+                console.log(retrive);
+            } else {
+                console.log("undefined");
+            }
+        }
+    }
+}

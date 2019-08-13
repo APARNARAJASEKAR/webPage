@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+
+<body class="blue">
+    <form id="product-form">
+        <h4 style="text-align: center"><u>PRODUCT PAGE</u></h4>
+
+        <div class="row">
+
+        </div>
+        <div class="row margin center-align">
+            <div class="input-field col s4">
+
+                ProductId: <input id="ProductId" type="text" class="validate" value="">
+
+            </div>
+        </div>
+        <div class="row margin center-align ">
+            <div class="input-field col s4">
+
+                Productname:<input id="Productname" type="text" class="validate">
+            </div>
+        </div>
+        <div class="row margin center-align">
+            <div class="input-field col s4">
+
+                Product Owner:<input id="Productowner" type="text" class="validate">
+            </div>
+
+
+        </div>
+        <div class="row margin center-align">
+            <div class="input-field col s4">
+
+
+            </div>
+
+
+        </div>
+
+        <div class="row margin center-align">
+            <div class="input-field col s4">
+
+                Product Url:<input id="Producturl" type="text">
+
+            </div>
+        </div>
+        <input type="submit" class="btn waves-effect waves-light col s12" class="submit" value="DISPLAY FORM VALUES">
+        <a class="btn waves-effect waves-light col s12" onclick="product_insert_Function()">Insert</a>
+
+
+        </div>
+
+    </form>
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert("Welcome to Product Insert Page");
+        $("#product-form").submit(function (event) {
+            alert("cames into page");
+            var pid = $("#ProductId").val();
+            var pname = $("#Productname").val();
+            var powner = $("#Productowner").val();
+            var purl = $("Producturl").val();
+            event.preventDefault();
+
+            console.log(pid);
+            console.log(pname);
+            console.log(powner);
+
+            console.log(purl);
+        });
+    });
+</script>
+
+<script src="./scripts/Products.js"></script>
+
+
+</html>
